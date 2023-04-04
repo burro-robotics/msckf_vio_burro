@@ -1,0 +1,38 @@
+# The modifications of the output file from Kalibr:
+    # 1. For each matrix (e.g. cam0/T_cam_imu), remove the brackets and minus sign for each line. Use one pair of brackets for each matrix.
+    # 2. Add the T_imu_body at the end of the calibration file (usually set to identity).
+cam0:
+  T_cam_imu:
+    [1.0000000,  0.0000000,  0.0000000, 0.006,
+    0.0000000,  1.0000000,  0.0000000, -0.005,
+    0.0000000, .0000000,  1.0000000, -0.012,
+    0.0, 0.0, 0.0, 1.0]
+  cam_overlaps: [1]
+  camera_model: pinhole
+  distortion_coeffs: [0.0, 0.0, 0.0, 0.0]
+  distortion_model: equidistant
+  intrinsics: [429.5706481933594, 429.5706481933597, 425.4299011230469, 235.29574584960938]
+  resolution: [848, 480]
+  timeshift_cam_imu: 0.0
+cam1:
+  T_cam_imu:
+    [1.0000000,  0.0000000,  0.0000000, -0.045,
+    0.0000000,  1.0000000,  0.0000000, -0.005,
+    0.0000000, .0000000,  1.0000000, -0.012,
+    0.0, 0.0, 0.0, 1.0]
+  T_cn_cnm1:
+    [0.9997863209650709,   -0.020649307313993077,   0.0011409713212246289,  -0.04957761334742124, 
+    0.020633867129875697,   0.9996889467954134,   -0.004101630259879458,   -5.110044044384557e-05,
+    -0.0011404096380215392,  0.00410178646471525,   0.9999909373657629,  -0.000363586489509635, 
+                     0,                   0,                   0,   1.000000000000000]
+  camera_model: pinhole
+  distortion_coeffs: [0.0, 0.0, 0.0, 0.0]
+  distortion_model: equidistant
+  intrinsics: [429.5706481933594, 429.5706481933597, 425.4299011230469, 235.29574584960938]
+  resolution: [848, 480]
+  timeshift_cam_imu: 0.0
+T_imu_body:
+  [1.0000, 0.0000, 0.0000, 0.0000,
+  0.0000, 1.0000, 0.0000, 0.0000,
+  0.0000, 0.0000, 1.0000, 0.0000,
+  0.0000, 0.0000, 0.0000, 1.0000]
