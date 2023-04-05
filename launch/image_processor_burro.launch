@@ -8,7 +8,7 @@
   <group ns="$(arg robot)">
     <node pkg="nodelet" type="nodelet" name="image_processor"
       args="standalone msckf_vio/ImageProcessorNodelet"
-      output="screen">
+      output="screen" >
 
       <rosparam command="load" file="$(arg calibration_file)"/>
       <param name="grid_row" value="4"/>
@@ -26,9 +26,13 @@
       <remap from="~imu" to="/imu/data"/>
       <remap from="~cam0_image" to="/camera4/infra1/image_rect_raw"/>
       <remap from="~cam1_image" to="/camera4/infra2/image_rect_raw"/>
-    
+
     </node>
   </group>
   <node pkg="burro_launcher" type="fake_imu.py" name="fake"/>
+    <node pkg="imu_complementary_filter" type="complementary_filter_node" name="imu_filter" output="screen">
+    <param name="use_mag" value="false"/>
+    <param name="publish_tf" value="false"/>
+    </node>
 
 </launch>
