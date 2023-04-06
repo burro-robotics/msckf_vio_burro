@@ -30,9 +30,17 @@
     </node>
   </group>
   <node pkg="burro_launcher" type="fake_imu.py" name="fake"/>
-    <node pkg="imu_complementary_filter" type="complementary_filter_node" name="imu_filter" output="screen">
-    <param name="use_mag" value="false"/>
-    <param name="publish_tf" value="false"/>
-    </node>
+
+  <node pkg="imu_filter_madgwick" type="imu_filter_node" name="imu_filter_node">
+     <param name="use_mag" value="false"/>
+     <param name="use_magnetic_field_msg" value="false"/>
+     <!-- <remap from="/imu/data_raw" to="/camera4/gyro/sample"/> -->
+   </node>
+
+   <!-- <node pkg="imu_complementary_filter" type="complementary_filter_node" name="imu_filter" output="screen">
+   <remap from="imu/data_raw" to="/camera4/gyro/sample"/>
+   <param name="use_mag" value="false"/>
+   <param name="publish_tf" value="false"/>
+  </node>  -->
 
 </launch>
