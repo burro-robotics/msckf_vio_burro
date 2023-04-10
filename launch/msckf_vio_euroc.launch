@@ -84,6 +84,35 @@
       <remap from="/odometry/filtered" to="/odometry/msckf_filtered" />
       <param name="publish_tf" value="false"/>
     </node>
+
+      <!-- IMU Bias  -->
+    <include file="$(find burro_launcher)/launch/processing/offline_processing.launch">
+        <arg name="run_deeplab" value="false"/>
+    </include>
+
+    <!-- Burro Nav node-->
+    <include file="$(find burro_launcher)/launch/navigation/burro_navigation.launch"/>
+
+    <!--UKF filter /odometry/filtered-->
+    <include file="$(find burro_launcher)/launch/controllers/burro_base_controller.launch"/>
+
+    <!--Bag play-->
+    <include file="$(find burro_tests)/launch/visual_map_fusion/bag_play_visual_map_fusion.launch"/>
+
+    <!--Bag record-->
+      <node name="record" pkg="rosbag" type="record" args="-O $(arg bagdir)/$(arg bag)/$(arg bag)_msckf_raw_data_$(arg camera).bag
+        /odometry/world
+        /odometry/filtered
+        /odometry/dsol
+        /odometry/dmvio
+        /burro_base/odom
+        /gps_rover/fix
+        /odometry/msckf_filtered
+        /odometry/msckf
+        /firefly_sbx/vio/odom"
+        >
+      </node>
+
   </group>
 
 </launch>
