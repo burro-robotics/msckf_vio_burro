@@ -5,7 +5,7 @@ roslaunch msckf_vio msckf_vio_euroc.launch data_set:=burro
 ```
 
 ### missing things
-- parameter to camera input for fake_imu.py
+- parameter to camera input for fake_imu.py(currently hard-coded and working with camera4)
 
 # MSCKF\_VIO
 
