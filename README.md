@@ -1,4 +1,4 @@
-# Installation
+# Installation for Burro
 
 - git clone the msckf repo under the path /src/.../third-party/
 - [optional] if you want to use msckf as the front-end of the rtabmap, git clone the rtabmap and rtabmap_ros repo under the path /src/.../third-party/
@@ -8,6 +8,10 @@
 - checkout the branch: `running-with-rtabmap`
 - build rtabmap with support of MSCKF
 - launch by `roslaunch rtabmap_ros burro_datasets.launch odom:=8` [1=Frame-to-Frame (F2F) 2=Fovis 3=viso2 4=DVO-SLAM 5=ORB_SLAM2 6=OKVIS 7=LOAM 8=MSCKF_VIO 9=VINS-Fusion 10=OpenVINS 11=FLOAM 12=Open3D"]
+
+### REF
+- https://github.com/introlab/rtabmap/issues/306
+- http://wiki.ros.org/rtabmap_ros/Tutorials/StereoHandHeldMapping#:~:text=RealSense%20D435i%20camera%20(stereo%20IR)%3A
 
 # Launch with Burro Dataset
 
