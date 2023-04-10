@@ -7,7 +7,7 @@
 
 - checkout the branch: ?
 - build rtabmap with support of MSCKF
-- launch by `roslaunch rtabmap_ros burro_datasets.launch`
+- launch by `roslaunch rtabmap_ros burro_datasets.launch odom:=8` [1=Frame-to-Frame (F2F) 2=Fovis 3=viso2 4=DVO-SLAM 5=ORB_SLAM2 6=OKVIS 7=LOAM 8=MSCKF_VIO 9=VINS-Fusion 10=OpenVINS 11=FLOAM 12=Open3D"]
 
 # Launch with Burro Dataset
 
