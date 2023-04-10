@@ -1,3 +1,14 @@
+# Installation
+
+- git clone the msckf repo under the path /src/.../third-party/
+- [optional] if you want to use msckf as the front-end of the rtabmap, git clone the rtabmap and rtabmap_ros repo under the path /src/.../third-party/
+
+# Launch with Burro Dataset and Rtabmap Backend
+
+- checkout the branch: ?
+- build rtabmap with support of MSCKF
+- launch by 
+
 # Launch with Burro Dataset
 
 ```
