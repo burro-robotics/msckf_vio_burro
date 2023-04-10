@@ -7,7 +7,7 @@
 
 - checkout the branch: ?
 - build rtabmap with support of MSCKF
-- launch by 
+- launch by `roslaunch rtabmap_ros burro_datasets.launch`
 
 # Launch with Burro Dataset
 
