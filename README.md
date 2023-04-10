@@ -6,12 +6,13 @@
 # Launch with Burro Dataset and Rtabmap Backend
 
 - checkout the branch: `running-with-rtabmap`
-- build rtabmap with support of MSCKF
+- build rtabmap with support of MSCKF[check REF 3.]
 - launch by `roslaunch rtabmap_ros burro_datasets.launch odom:=8` [1=Frame-to-Frame (F2F) 2=Fovis 3=viso2 4=DVO-SLAM 5=ORB_SLAM2 6=OKVIS 7=LOAM 8=MSCKF_VIO 9=VINS-Fusion 10=OpenVINS 11=FLOAM 12=Open3D"]
 
 ### REF
-- https://github.com/introlab/rtabmap/issues/306
-- http://wiki.ros.org/rtabmap_ros/Tutorials/StereoHandHeldMapping#:~:text=RealSense%20D435i%20camera%20(stereo%20IR)%3A
+- 1. https://github.com/introlab/rtabmap/issues/306
+- 2. http://wiki.ros.org/rtabmap_ros/Tutorials/StereoHandHeldMapping#:~:text=RealSense%20D435i%20camera%20(stereo%20IR)%3A
+- 3. https://github.com/introlab/rtabmap/blob/0070de4aafab0feaf5e37b497b1354d2264d41c8/CMakeLists.txt#L215
 
 # Launch with Burro Dataset
 
