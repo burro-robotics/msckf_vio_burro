@@ -5,9 +5,9 @@
 
 # Launch with Burro Dataset and Rtabmap Backend
 
-- checkout the branch: `running-with-rtabmap`
+- checkout the branch: `git checkout running-with-rtabmap`
 - build rtabmap with support of MSCKF[check REF 3.]
-- launch by `roslaunch rtabmap_ros burro_datasets.launch odom:=8` [1=Frame-to-Frame (F2F) 2=Fovis 3=viso2 4=DVO-SLAM 5=ORB_SLAM2 6=OKVIS 7=LOAM 8=MSCKF_VIO 9=VINS-Fusion 10=OpenVINS 11=FLOAM 12=Open3D"]
+- launch rtabmap by `roslaunch rtabmap_ros burro_datasets.launch odom:=8` [1=Frame-to-Frame (F2F) 2=Fovis 3=viso2 4=DVO-SLAM 5=ORB_SLAM2 6=OKVIS 7=LOAM 8=MSCKF_VIO 9=VINS-Fusion 10=OpenVINS 11=FLOAM 12=Open3D"]
 
 ### REF
 1. https://github.com/introlab/rtabmap/issues/306
@@ -16,6 +16,7 @@
 
 # Launch with Burro Dataset
 
+1. `git checkout running-burro-data`
 ```
 roslaunch msckf_vio msckf_vio_euroc.launch data_set:=burro
 ```
